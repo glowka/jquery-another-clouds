@@ -1,4 +1,4 @@
-
+// Default values
 @color-inside: #ffffff;
 @color-outside: #c8e8e3;
 @width-inside: 9px;
@@ -7,13 +7,14 @@
 @border-width: ceil(@width-delta / 1.414);
 @cloud-margin: 5px;
 
+// Function definition
 
-.cloud-inner {
-  border: @border-width solid @color-outside;
-  background: @color-inside;
-}
+.cloud-container() {
+    .cloud-inner {
+        border: @border-width solid @color-outside;
+        background: @color-inside;
+    }
 
-.cloud-container {
     &:after, &:before {
         border: solid transparent;
         content: " ";
